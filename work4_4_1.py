@@ -37,5 +37,5 @@ some_html = """
 """
 
 soup = BeautifulSoup(some_html, 'lxml')
-pictures = ... # Допишите сюда свой код.
+pictures = soup.find_all('a', {'href': re.compile(r'.+\.(jpg|jpeg|gif|png)$')}) # Допишите сюда свой код.
 print(pictures)
